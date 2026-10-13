@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-subtle: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: #cbd5e1;
+  --accent-cyan: #0284c7;
+  --accent-emerald: #059669;
+  --accent-purple: #7c3aed;
+  --accent-amber: #d97706;
+}
+
+.dark {
+  --bg-primary: #070b13;
+  --bg-card: #0b0f17;
+  --bg-card-subtle: #111827;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-color: #1e293b;
+  --accent-cyan: #06b6d4;
+  --accent-emerald: #10b981;
+  --accent-purple: #a855f7;
+  --accent-amber: #f59e0b;
+}
+
+/* 1. SAFE AREAS */
+header, 
+.app-header, 
+nav.top-nav {
+  padding-top: max(12px, env(safe-area-inset-top));
+}
+
+.fixed-bottom-bar,
+footer.mobile-tabs,
+[data-mobile-bottom-bar] {
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+}
+
+/* 4. OVERSCROLL */
+html,
+body,
+[data-scrollable],
+.overflow-y-auto,
+.overflow-x-auto,
+.scrollable-container {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 5. TEXT SELECTION */
+button,
+[role='tab'],
+.pill-ok,
+.pill-warn,
+svg,
+.select-none-ui {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.content-selectable,
+.log-stream,
+.knowledge-content,
+.hash-content,
+pre,
+code,
+table,
+p,
+article {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+/* 7. FONT SIZES & MOBILE SCALING */
+body {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* 11. TAP TARGETS - Minimum 44px */
+.mobile-touch-target,
+.mobile-tab-btn,
+button.touch-target-44 {
+  min-height: 44px;
+  min-width: 44px;
+}
